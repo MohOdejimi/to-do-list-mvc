@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+      </style>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Todo</title>
+</head>
+<body>
+    <h2>Todo's</h2>
+
+    <ul>
+        <% for (let i = 0; i < todos.length; i++) { %>
+            <li>
+                <% if (todos[i].completed === true) { %>
+                    <span class='completed'><%= todos[i].todo %></span>
+                <% } else { %>
+                    <span><%= todos[i].todo %></span>
+                <% } %>
+                <i class="fas fa-check"></i>
+                <i class="fas fa-trash"></i>
+            </li>
+        <% } %>
+    </ul>
+
+    <h3>Items Left: <%= left %></h3>
+
+    <h3>Completed: <%= completed %></h3>
+
+    <form action='/todos/createTodo' method='POST'>
+        <input type='text' name='todoItem' placeholder='Enter a new Task'>
+        <input type='submit'>
+    </form>
+
+    <script src='js/client.js'></script>
+</body>
+</html>
