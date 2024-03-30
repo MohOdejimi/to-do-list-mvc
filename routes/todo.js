@@ -8,6 +8,8 @@ router.post('/createTodo', todoControllers.createTodos)
 
 router.put('/markComplete', todoControllers.markComplete)
 
+router.put('/markIncomplete', todoControllers.markIncomplete)
+
 router.delete('/deleteTodo', todoControllers.deleteTodo)
 
 module.exports = router

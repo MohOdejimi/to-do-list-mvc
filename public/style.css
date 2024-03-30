@@ -8,6 +8,6 @@ body {
 .completed {
     text-decoration: line-through;
 }
-.fa-check, .fa-trash {
+.fa-check, .fa-trash, .fa-times {
     cursor: pointer
 }
